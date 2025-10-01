@@ -1,0 +1,56 @@
+---------------- file 1 ------------------------
+ 
+length: 4
+// childNodes (length: 4)
+// มันเจอทั้งหมด 4 node ลูก ของ <div>
+week07.js:7 #comment
+//มาตรฐานตาม DOM spec
+week07.js:8 8 => COMMENT
+week07.js:9  this is a comment node =>document
+week07.js:7 #text =>
+week07.js:8 3 => text
+week07.js:9 
+      This is some 
+week07.js:7 SPAN 
+week07.js:8 1 =>ELEMENT
+week07.js:9 null 
+week07.js:7 #text
+week07.js:8 3 => TEXT
+week07.js:9  text content.
+    
+week07.js:13 length: 1 =>อันนี้นับเฉพาะ element node ลูกของ <div>
+week07.js:15 SPAN
+week07.js:16 1
+week07.js:17 null
+
+---------------- file 2 ------------------------
+เราสร้าง <p> ใหม่ แล้วแปะเข้า <div>
+
+ตั้ง attribute ต่าง ๆ ให้มัน (id, style, name)
+
+ใส่ข้อความเข้า <p>
+
+ใน inspect =>  มีการเพิ่ม <p id="int141" style="color:red" name="core">INT141</p> เข้ามา
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="subject">
+      <p>INT140</p>
+      <!-- <p></p> -->
+!!=>  <p id="int141" style="color:red" name="core">INT141</p>
+    </div>
+    <script src="./week07-02.js"></script>
+  </body>
+</html>
+
+
+
+---------------- file 3 ------------------------
+getElementById('drink') : ไปหยิบ <ul> มา
+children : เอาลูก element ของ <ul> ทั้งหมด → จะได้ <li> 4 ตัว
+Array.from(...).find(...) : แปลง HTMLCollection เป็น array เพื่อใช้ .find() แล้วหา <li> ที่มีข้อความ "Tea"
+.previousElementSibling : ดูพี่น้องตัวก่อนของ <li>Tea</li> → คือ <li>coffee</li>
+.nextElementSibling : ดูพี่น้องตัวถัดไป → <li>Chocolate</li>
+.parentElement : ดู parent ของ <li>Tea</li> → <ul id="drink">
