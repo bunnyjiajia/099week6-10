@@ -1,0 +1,67 @@
+
+const soupIdElement = document.getElementById("soup")
+ใช้สำหรับ หา element เดียว ที่มี id="soup"
+console.log(soupIdElement)
+จะแสดง object ของ element นั้นใน Console
+
+const veganElements = document.querySelectorAll(".vegan")
+ใช้หา ทุก element ที่มี class="vegan"
+console.log(veganElements)
+
+NodeList(3) [li.vegan, li.vegan, li.vegan]
+0: li.vegan
+1: li.vegan
+2: li.vegan
+length: 3
+[[Prototype]]: NodeList
+
+
+const meatElements = document.querySelectorAll(".meat")
+console.log(meatElements)
+หา element ทุกตัวที่มี class="meat"
+
+const nameAttrElements = document.getElementsByName("fname")
+console.log(nameAttrElements)
+ใช้หา input หรือ element อื่น ๆ ที่มี name="fname"
+คืนค่าเป็น NodeList ของ elements เหล่านั้น
+
+NodeList(2) [input#fname, input#fullname]
+0: input#fname
+1: input#fullname
+length: 2
+[[Prototype]]: NodeList
+
+const liElements = document.getElementsByTagName("li")
+console.log(liElements)
+ใช้เพื่อหา ทุก <li> element ทั้งหมดในหน้า
+
+HTMLCollection(7) [li.vegan, li.meat, li.meat, li.meat, li.vegan, li.meat, li.vegan]
+0: li.vegan
+1: li.meat
+2: li.meat
+3: li.meat
+4: li.vegan
+5: li.meat
+6: li.vegan
+length: 7
+[[Prototype]]: HTMLCollection
+
+
+const veganClassElements = document.getElementsByClassName("vegan")
+console.log(veganClassElements)
+หา element ทุกตัวที่มี class vegan
+
+HTMLCollection(3) [li.vegan, li.vegan, li.vegan]
+0: li.vegan
+1: li.vegan
+2: li.vegan
+length: 3
+[[Prototype]]: HTMLCollection
+
+getElementById() : ใช้หา id เท่านั้น return เป็น Element
+querySelector() : ใช้หา ".class", "#id", "tag" return เป็น Element
+querySelectorAll() : ทุก element ที่ตรง return เป็น NodeList
+getElementsByClassName() : HTMLCollection , Class name
+getElementsByTagName(): HTMLCollection , Tag name
+getElementsByName() : NodeList , Attribute name="..."
+

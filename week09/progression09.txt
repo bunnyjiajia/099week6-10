@@ -1,0 +1,37 @@
+เปรียบเทียบ
+คลิก <button> : currentTarget (button),currentTarget (div),currentTarget (body)
+== Input Element ==
+main.js:34 <input type=​"text" id=​"fname" name=​"fname" value=​"John">​
+main.js:6 == Button Clicked ==
+main.js:7 event.target : <font dir=​"auto" style=​"vertical-align:​ inherit;​">​ตกลง​</font>​
+main.js:8 event.currentTarget : <button style=​"background-color:​ cadetblue;​">​…​</button>​
+main.js:9 event.eventPhase : 3
+main.js:10 event.type : click
+main.js:17 == Div Clicked ==
+main.js:18 event.target : <font dir=​"auto" style=​"vertical-align:​ inherit;​">​ตกลง​</font>​
+main.js:19 event.currentTarget : <div style=​"height:​ 100px;​ background-color:​ yellow;​ ">​…​</div>​
+main.js:26 == Body Clicked ==
+main.js:27 event.target : <font dir=​"auto" style=​"vertical-align:​ inherit;​">​ตกลง​</font>​
+main.js:28 event.currentTarget : 
+
+
+คลิก <div> : currentTarget (div),currentTarget (body)
+== Input Element ==
+main.js:34 <input type=​"text" id=​"fname" name=​"fname" value=​"John">​
+main.js:17 == Div Clicked ==
+main.js:18 event.target : <div style=​"height:​ 100px;​ background-color:​ yellow;​ ">​…​</div>​
+main.js:19 event.currentTarget : <div style=​"height:​ 100px;​ background-color:​ yellow;​ ">​…​</div>​
+main.js:26 == Body Clicked ==
+main.js:27 event.target : <div style=​"height:​ 100px;​ background-color:​ yellow;​ ">​…​</div>​
+main.js:28 event.currentTarget : <body style=​"height:​ 300px;​ background-color:​ green;​">​…​</body>​
+
+คลิก <body> : currentTarget (body)
+== Input Element ==
+main.js:34 <input type=​"text" id=​"fname" name=​"fname" value=​"John">​
+main.js:17 == Div Clicked ==
+main.js:18 event.target : <form action=​"/​action_page.php">​…​</form>​
+main.js:19 event.currentTarget : <div style=​"height:​ 100px;​ background-color:​ yellow;​ ">​…​</div>​
+main.js:26 == Body Clicked ==
+main.js:27 event.target : <form action=​"/​action_page.php">​…​</form>​
+main.js:28 event.currentTarget : <body style=​"height:​ 300px;​ background-color:​ green;​">​…​</body>​
+
